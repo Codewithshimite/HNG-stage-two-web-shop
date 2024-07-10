@@ -24,7 +24,7 @@
       "price": 5000,
       "starImage": "images/starRating.png",
       "starUnit":  "5.0",
-      "image": "images/frame 58.png"
+      "image": "images/Frame 58.png"
   },
   {
       "id": 4,
@@ -32,7 +32,7 @@
       "price": 25000,
      "starImage": "images/starRating.png",
       "starUnit":  "4.9",
-      "image": "images/frame 55.png"
+      "image": "images/Frame 55.png"
   },
   {
       "id": 5,
@@ -56,7 +56,7 @@
       "price": 23000,
       "starImage": "./images/starRating.png",
       "starUnit":  "4.5",
-      "image": "images/frame 57.png"
+      "image": "images/Frame 57.png"
   },
   {
       "id": 8,
