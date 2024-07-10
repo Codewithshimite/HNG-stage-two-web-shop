@@ -46,7 +46,7 @@
       "id": 6,
       "name":"Sisi Leater Bag(white)",
       "price": 20000,
-      "starImage": "/images/starRating.png",
+      "starImage": "images/starRating.png",
       "starUnit":  "4.8",
       "image": "images/Frame 54.png"
   },
@@ -54,7 +54,7 @@
       "id": 7,
       "name":"Comfy Paddd Sneakers ",
       "price": 23000,
-      "starImage": "./images/starRating.png",
+      "starImage": "images/starRating.png",
       "starUnit":  "4.5",
       "image": "images/Frame 57.png"
   },
