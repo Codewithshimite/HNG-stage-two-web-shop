@@ -4,15 +4,15 @@
       "id": 1,
       "name":" Yellow ladies bag",
       "price": 15000,
-      "starImage": "./images/starRating.png",
+      "starImage": "images/starRating.png",
       "starUnit":  "4.5",
-      "image": "./images/Frame 56.png"
+      "image": "images/Frame 56.png"
   },
   {
       "id": 2,
       "name":"Mens' Leather shoe(brown)",
       "price": 15000,
-      "starImage": "./images/starRating.png",
+      "starImage": "images/starRating.png",
       "starUnit":  "3.8",
       "star":  2,
       "image": "images/Frame 52.png"
@@ -22,7 +22,7 @@
       "id": 3,
       "name":"Perfect Fit Foundation",
       "price": 5000,
-      "starImage": "./images/starRating.png",
+      "starImage": "images/starRating.png",
       "starUnit":  "5.0",
       "image": "images/frame 58.png"
   },
@@ -30,7 +30,7 @@
       "id": 4,
       "name":"Lively Green ladies Bag",
       "price": 25000,
-     "starImage": "./images/starRating.png",
+     "starImage": "images/starRating.png",
       "starUnit":  "4.9",
       "image": "images/frame 55.png"
   },
@@ -38,7 +38,7 @@
       "id": 5,
       "name":"Elegant Female Pumps",
       "price": 25000,
-      "starImage": "./images/starRating.png",
+      "starImage": "images/starRating.png",
       "starUnit":  "4.5",
       "image": "images/Frame 10.png"
   },
@@ -62,7 +62,7 @@
       "id": 8,
       "name":"Stylish Colorful Bag",
       "price": 14000,
-      "starImage": "./images/starRating.png",
+      "starImage": "images/starRating.png",
       "starUnit":  "5.0",
       "image": "images/Frame_53.png"
   }
