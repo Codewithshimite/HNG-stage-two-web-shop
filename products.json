@@ -10,7 +10,7 @@
   },
   {
       "id": 2,
-      "name":"Mens' Leather shoe(brown)",
+      "name":"Mens' Leather shoe",
       "price": 15000,
       "starImage": "images/starRating.png",
       "starUnit":  "3.8",
@@ -44,7 +44,7 @@
   },
   {
       "id": 6,
-      "name":"Sisi Leater Bag(white)",
+      "name":"Sisi Leather Bag",
       "price": 20000,
       "starImage": "images/starRating.png",
       "starUnit":  "4.8",
