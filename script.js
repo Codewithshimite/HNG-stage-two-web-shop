@@ -2,6 +2,7 @@ let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCart = document.querySelector('.icon-cart');
 let iconCartSpan = document.querySelector('.icon-cart span');
+let totalPriceHTML = document.querySelector('.totalPrice'); // Add this element in your HTML
 let body = document.querySelector('body');
 let closeCart = document.querySelector('.close');
 let products = [];
@@ -10,48 +11,43 @@ let cart = [];
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
-    body.classList.toggle('cart-show');
-})
+    // body.classList.toggle('cart-show');
+});
+
 closeCart.addEventListener('mouseenter', () => {
     body.classList.toggle('showCart');
-})
+});
 
 
-    const addDataToHTML = () => {
-    // remove datas default from HTML
+const addDataToHTML = () => {
+    if(products.length > 0) {
+        products.forEach(product => {
+            let newProduct = document.createElement('div');
+            newProduct.dataset.id = product.id;
+            newProduct.classList.add('item');
+            newProduct.innerHTML = 
+            `<img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <div class="star-things">
+            <img class="star-icon" src="${product.starImage}">
+            <div class="star-unit">${product.starUnit}</div>
+            </div>
+            <div class="price">₦${product.price}</div>
+            <button class="addCart">Add To Cart</button>`;
 
-        // add new datas
-        if(products.length > 0) // if has data
-        {
-            products.forEach(product => {
-                let newProduct = document.createElement('div');
-                newProduct.dataset.id = product.id;
-                newProduct.classList.add('item');
-                newProduct.innerHTML = 
-                `<img src="${product.image}" alt="${product.name}">
-                <h2>${product.name}</h2>
-                <div class="star-things">
-                <img class="star-icon" src="${product.starImage}">
-                <div class="star-unit">${product.starUnit}</div>
-                </div>
-                <div class="price">N${product.price}</div>
-                <button class="addCart">Add To Cart</button>`;
-
-                listProductHTML.appendChild(newProduct);
-            })
-        }
+            listProductHTML.appendChild(newProduct);
+        });
     }
-    
+};
 
+listProductHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if(positionClick.classList.contains('addCart')){
+        let id_product = positionClick.parentElement.dataset.id;
+        addToCart(id_product);
+    }
+});
 
-
-    listProductHTML.addEventListener('click', (event) => {
-        let positionClick = event.target;
-        if(positionClick.classList.contains('addCart')){
-            let id_product = positionClick.parentElement.dataset.id;
-            addToCart(id_product);
-        }
-    })
 const addToCart = (product_id) => {
     let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
     if(cart.length <= 0){
@@ -59,26 +55,29 @@ const addToCart = (product_id) => {
             product_id: product_id,
             quantity: 1
         }];
-    }else if(positionThisProductInCart < 0){
+    } else if(positionThisProductInCart < 0){
         cart.push({
             product_id: product_id,
             quantity: 1
         });
-    }else{
+    } else {
         cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
     }
     addCartToHTML();
     addCartToMemory();
-}
+    getTotalPrice();
+};
+
 const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(cart));
-}
+};
+
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
     if(cart.length > 0){
         cart.forEach(item => {
-            totalQuantity = totalQuantity +  item.quantity;
+            totalQuantity = totalQuantity + item.quantity;
             let newItem = document.createElement('div');
             newItem.classList.add('item');
             newItem.dataset.id = item.product_id;
@@ -100,10 +99,11 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
-        })
+        });
     }
     iconCartSpan.innerText = totalQuantity;
-}
+    getTotalPrice();
+};
 
 listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
@@ -115,7 +115,8 @@ listCartHTML.addEventListener('click', (event) => {
         }
         changeQuantityCart(product_id, type);
     }
-})
+});
+
 const changeQuantityCart = (product_id, type) => {
     let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
     if(positionItemInCart >= 0){
@@ -129,7 +130,7 @@ const changeQuantityCart = (product_id, type) => {
                 let changeQuantity = cart[positionItemInCart].quantity - 1;
                 if (changeQuantity > 0) {
                     cart[positionItemInCart].quantity = changeQuantity;
-                }else{
+                } else {
                     cart.splice(positionItemInCart, 1);
                 }
                 break;
@@ -137,21 +138,32 @@ const changeQuantityCart = (product_id, type) => {
     }
     addCartToHTML();
     addCartToMemory();
-}
+    getTotalPrice();
+};
+
+const getTotalPrice = () => {
+    let total = 0;
+    cart.forEach(item => {
+        let positionProduct = products.findIndex((value) => value.id == item.product_id);
+        let info = products[positionProduct];
+        total += info.price * item.quantity;
+    });
+    totalPriceHTML.innerText = `Total Price: ₦${total}`;
+};
+
 
 const initApp = () => {
-    // get data product
     fetch('products.json')
     .then(response => response.json())
     .then(data => {
         products = data;
         addDataToHTML();
 
-        // get data cart from memory
         if(localStorage.getItem('cart')){
             cart = JSON.parse(localStorage.getItem('cart'));
             addCartToHTML();
         }
-    })
-}
+    });
+};
+
 initApp();
