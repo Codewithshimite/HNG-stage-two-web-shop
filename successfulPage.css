@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 .textHolder{
   width: 200px;
   height: 200px;
@@ -18,7 +18,7 @@
 
 button{
   cursor: pointer;
-=======
+
 .textHolder{
   width: 200px;
   height: 200px;
@@ -38,5 +38,5 @@ button{
 
 button{
   cursor: pointer;
->>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
+
 }
