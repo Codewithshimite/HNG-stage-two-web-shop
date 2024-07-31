@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Product Image</title>
+    <style>
+
+      #image-container{
+        width: 300px;
+            height: 200px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+      }
+
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container" class="product-image"></div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const getQueryParam = (name) => {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            };
+
+            const productId = parseInt(getQueryParam('id'), 10);
+
+            async function fetchImageById(productId) {
+                try {
+                    const response = await fetch('products.json');
+                    const products = await response.json();
+
+                    const product = products.find(product => product.id === productId);
+
+                    if (product) {
+                        const imageContainer = document.getElementById('image-container');
+
+                        const productImage = document.createElement('img');
+                        productImage.src = product.image;
+                        productImage.alt = product.name;
+
+                        imageContainer.appendChild(productImage);
+                    } else {
+                        console.error('Product not found with ID:', productId);
+                    }
+                } catch (error) {
+                    console.error('Error fetching the product:', error);
+                }
+            }
+
+            if (!isNaN(productId)) {
+                fetchImageById(productId);
+            } else {
+                console.error('Invalid or missing product ID in URL');
+            }
+        });
+    </script>
+</body>
+</html>

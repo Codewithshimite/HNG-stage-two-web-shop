@@ -6,33 +6,48 @@
       "price": 15000,
       "starImage": "images/starRating.png",
       "starUnit":  "4.5",
-      "image": "images/Frame 56.png"
+      "image": "images/Frame 56.png",
+      "detail": "These timeless black stiletto pumps are perfect for adding a touch of elegance to any outfit. The soft suede upper and sleek pointed toe create a sophisticated silhouette, while the stiletto heel provides a confident lift.",
+      "keyFeatures": "</li> <li> Pointed toe</li> <li>Stiletoe heel</li> <li>Slip-on design</li>",
+      "perferctFor": "<li>Formal Events</li> <li> Dinner Night</li> <li>Professional settings</li> <li> Add a Polish to your day</li>"
   },
+
   {
       "id": 2,
-      "name":"Mens' Leather shoe(brown)",
+      "name":"Mens' Leather shoe",
       "price": 15000,
       "starImage": "images/starRating.png",
       "starUnit":  "3.8",
       "star":  2,
-      "image": "images/Frame 52.png"
+      "image": "images/Frame 52.png",
+      "detail": "Elevate your style with these timeless brown leather brogue shoes. Crafted from premium leather, these shoes feature intricate brogue detailing and a classic lace-up design. The durable construction and comfortable fit make them perfect for both.",
+      "keyFeatures": "</li> <li> Genuine leather upper</li> <li>Genuine leather upper</li> <li>Lace-up closure</li><li>Comfortable padded insole</li>",
+      "perferctFor": "<li>Formal Events</li> <li> Business attire</li> <li>Casual outings</li> <li>Adding a touch of sophistication to your everyday look</li>"
 
   },
+
   {
       "id": 3,
       "name":"Perfect Fit Foundation",
       "price": 5000,
       "starImage": "images/starRating.png",
       "starUnit":  "5.0",
-      "image": "images/Frame 58.png"
+      "image": "images/Frame 58.png",
+      "detail": "These timeless black stiletto pumps are perfect for adding a touch of elegance to any outfit. The soft suede upper and sleek pointed toe create a sophisticated silhouette, while the stiletto heel provides a confident lift.",
+      "keyFeatures": "</li> <li> Pointed toe</li> <li>Stiletoe heel</li> <li>Slip-on design</li>",
+      "perferctFor": "<li>Formal Events</li> <li> Dinner Night</li> <li>Professional settings</li> <li> Add a Polish to your day</li>"
   },
+
   {
       "id": 4,
       "name":"Lively Green ladies Bag",
       "price": 25000,
      "starImage": "images/starRating.png",
       "starUnit":  "4.9",
-      "image": "images/Frame 55.png"
+      "image": "images/Frame 55.png",
+      "detail": "Make a statement with the Emerald Envy Satchel. This striking green leather handbag effortlessly combines style and functionality. Its vibrant hue, structured silhouette, and convenient top handles make it the perfect accessory for the modern woman on the go.",
+      "keyFeatures": "</li> <li>Luxurious emerald green leather</li> <li>Silver-tone hardware</li> <li>Dual top handles for easy carrying</li>",
+      "perferctFor": "<li>Formal Events</li> <li> Dinner Night</li> <li>Weekend brunches and shopping trips</li> <li>Making a bold fashion statement</li>"
   },
   {
       "id": 5,
@@ -40,15 +55,24 @@
       "price": 25000,
       "starImage": "images/starRating.png",
       "starUnit":  "4.5",
-      "image": "images/Frame 10.png"
+      "image": "images/Frame 10.png",
+      "detail": "These timeless black stiletto pumps are perfect for adding a touch of elegance to any outfit. The soft suede upper and sleek pointed toe create a sophisticated silhouette, while the stiletto heel provides a confident lift.",
+      "keyFeatures": "</li> <li> Pointed toe</li> <li>Stiletoe heel</li> <li>Slip-on design</li>",
+      "perferctFor": "<li>Everyday errands and commutes</li> <li> Adding a pop of color to any outfit</li> <li>Professional settings</li> <li> Add a Polish to your day</li>"
+
+      
   },
+
   {
       "id": 6,
-      "name":"Sisi Leater Bag(white)",
+      "name":"Sisi Leather Bag",
       "price": 20000,
       "starImage": "images/starRating.png",
       "starUnit":  "4.8",
-      "image": "images/Frame 54.png"
+      "image": "images/Frame 54.png",
+      "detail": "Embrace effortless sophistication with the Sisi Bag. This exquisite beige quilted leather handbag exudes timeless charm. Its structured silhouette, delicate gold chain strap, and iconic quilted pattern make it the perfect accessory for any occasion.",
+      "keyFeatures": "</li> <li> Pointed toe</li> <li>Stiletoe heel</li> <li>Slip-on design</li>",
+      "perferctFor": "<li>Formal Events</li> <li> Dinner Night</li> <li>Professional settings</li> <li> Add a Polish to your day</li>"
   },
   {
       "id": 7,
@@ -56,7 +80,10 @@
       "price": 23000,
       "starImage": "images/starRating.png",
       "starUnit":  "4.5",
-      "image": "images/Frame 57.png"
+      "image": "images/Frame 57.png",
+      "detail": "These timeless black stiletto pumps are perfect for adding a touch of elegance to any outfit. The soft suede upper and sleek pointed toe create a sophisticated silhouette, while the stiletto heel provides a confident lift.",
+      "keyFeatures": "</li> <li> Pointed toe</li> <li>Stiletoe heel</li> <li>Slip-on design</li>",
+      "perferctFor": "<li>Formal Events</li> <li> Dinner Night</li> <li>Professional settings</li> <li> Add a Polish to your day</li>"
   },
   {
       "id": 8,
@@ -64,7 +91,10 @@
       "price": 14000,
       "starImage": "images/starRating.png",
       "starUnit":  "5.0",
-      "image": "images/Frame_53.png"
+      "image": "images/Frame_53.png",
+      "detail": "These timeless black stiletto pumps are perfect for adding a touch of elegance to any outfit. The soft suede upper and sleek pointed toe create a sophisticated silhouette, while the stiletto heel provides a confident lift.",
+      "keyFeatures": "</li> <li> Pointed toe</li> <li>Stiletoe heel</li> <li>Slip-on design</li>",
+      "perferctFor": "<li>Formal Events</li> <li> Dinner Night</li> <li>Professional settings</li> <li> Add a Polish to your day</li>"
   }
 
 ]
