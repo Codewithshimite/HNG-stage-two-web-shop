@@ -31,7 +31,7 @@ const addDataToHTML = () => {
             newProduct.dataset.id = product.id;
             newProduct.classList.add('item');
             newProduct.innerHTML = `
-                <a href="./detail-page.html?id=${product.id}" class="product-link">
+                <a href="detail-page.html?id=${product.id}" class="product-link">
                     <img src="${product.image}" alt="${product.name}">
                 </a>
                 <h2>${product.name}</h2>
