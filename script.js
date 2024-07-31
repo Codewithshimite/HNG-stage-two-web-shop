@@ -2,7 +2,11 @@ let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCart = document.querySelector('.icon-cart');
 let iconCartSpan = document.querySelector('.icon-cart span');
+<<<<<<< HEAD
 let totalPriceHTML = document.querySelector('.totalPrice');
+=======
+let totalPriceHTML = document.querySelector('.totalPrice'); // Add this element in your HTML
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
 let body = document.querySelector('body');
 let closeCart = document.querySelector('.close');
 let products = [];
@@ -10,12 +14,20 @@ let cart = [];
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
+<<<<<<< HEAD
     // Adjust container position when cart is shown
     if (body.classList.contains('showCart')) {
         document.querySelector(".container").style.transform = "translateX(-250px)";
     } else {
         document.querySelector(".container").style.transform = "translateX(0)";
     }
+=======
+    // body.classList.toggle('cart-show');
+});
+
+closeCart.addEventListener('mouseenter', () => {
+    body.classList.toggle('showCart');
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
 });
 
 closeCart.addEventListener('click', () => {
@@ -24,12 +36,17 @@ closeCart.addEventListener('click', () => {
 });
 
 const addDataToHTML = () => {
+<<<<<<< HEAD
     if (products.length > 0) {
+=======
+    if(products.length > 0) {
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
         products.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.dataset.id = product.id;
             newProduct.classList.add('item');
             newProduct.innerHTML = 
+<<<<<<< HEAD
             `<a href="detail-page.html?id=${product.id}" class="product-link">
                 <img src="${product.image}" alt="${product.name}">
             </a>
@@ -37,6 +54,13 @@ const addDataToHTML = () => {
             <div class="star-things">
                 <img class="star-icon" src="${product.starImage}">
                 <div class="star-unit">${product.starUnit}</div>
+=======
+            `<img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <div class="star-things">
+            <img class="star-icon" src="${product.starImage}">
+            <div class="star-unit">${product.starUnit}</div>
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
             </div>
             <div class="price">₦${product.price}</div>
             <button class="addCart">Add To Cart</button>`;
@@ -48,7 +72,11 @@ const addDataToHTML = () => {
 
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
+<<<<<<< HEAD
     if (positionClick.classList.contains('addCart')) {
+=======
+    if(positionClick.classList.contains('addCart')){
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
         let id_product = positionClick.parentElement.dataset.id;
         addToCart(id_product);
     }
@@ -61,7 +89,11 @@ const addToCart = (product_id) => {
             product_id: product_id,
             quantity: 1
         }];
+<<<<<<< HEAD
     } else if (positionThisProductInCart < 0) {
+=======
+    } else if(positionThisProductInCart < 0){
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
         cart.push({
             product_id: product_id,
             quantity: 1
@@ -83,7 +115,11 @@ const addCartToHTML = () => {
     let totalQuantity = 0;
     if (cart.length > 0) {
         cart.forEach(item => {
+<<<<<<< HEAD
             totalQuantity += item.quantity;
+=======
+            totalQuantity = totalQuantity + item.quantity;
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
             let newItem = document.createElement('div');
             newItem.classList.add('item');
             newItem.dataset.id = item.product_id;
@@ -106,7 +142,10 @@ const addCartToHTML = () => {
                 </div>
                 
             `;
+<<<<<<< HEAD
             
+=======
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
         });
     }
     iconCartSpan.innerText = totalQuantity;
@@ -155,6 +194,7 @@ const getTotalPrice = () => {
         let info = products[positionProduct];
         total += info.price * item.quantity;
     });
+<<<<<<< HEAD
     
 
     if(total === 0){
@@ -164,6 +204,11 @@ const getTotalPrice = () => {
     }
     
 };
+=======
+    totalPriceHTML.innerText = `Total Price: ₦${total}`;
+};
+
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
 
 const initApp = () => {
     fetch('products.json')
@@ -172,7 +217,11 @@ const initApp = () => {
         products = data;
         addDataToHTML();
 
+<<<<<<< HEAD
         if (localStorage.getItem('cart')) {
+=======
+        if(localStorage.getItem('cart')){
+>>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
             cart = JSON.parse(localStorage.getItem('cart'));
             addCartToHTML();
         }
