@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 document.addEventListener('DOMContentLoaded', () => {
     let cartItemsContainer = document.querySelector('.cart-items');
     let totalPriceHTML = document.querySelector('.totalPrice');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-=======
+
 document.addEventListener('DOMContentLoaded', () => {
     let cartItemsContainer = document.querySelector('.cart-items');
     let totalPriceHTML = document.querySelector('.totalPrice');
@@ -138,4 +138,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
->>>>>>> cf05847c6d257e3bb1ae7518175de645960cf43c
+
