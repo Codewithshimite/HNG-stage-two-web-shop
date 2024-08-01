@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let empty = document.querySelector('.empty')
     let products = [];
+    let stillButton = document.querySelector(".stillButton")
+    let tooltip = document.querySelector(".tooltip-container")
 
     //This is the place i fetched the items form localStorage(json)
     fetch('products.json')
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTotalPrice();
         });
 
-        //This is the placce i added the items html
+        //This is the place i added the items html
     const loadCartItems = () => {
         cartItemsContainer.innerHTML = '';
         cart.forEach(item => {
@@ -46,14 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
         if (total === 0) {
             empty.style.display = 'block';
-        } else {
-            empty.style.display = 'none';
+            stillButton.disabled = true;
+            tooltip.style.display = 'block';
             
-        };
-
-        if(total === 0){
-            totalPriceHTML.style.display = 'none';
+        } else {
+            stillButton.disabled = false;
+            tooltip.style.display = 'none';
         }
+
         
     };
 
@@ -66,5 +68,3 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'successfulPage.html'; 
     });
 });
-
-
